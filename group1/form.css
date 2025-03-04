@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+.search-bar, .ads-car {
+    width:100%;
+    margin: 20px auto;
+    padding: 10px;
+    border: 2px solid black;
+}
+.categories {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+.category,.sports-car,.casual-car,.family-car {
+    width: 20%;
+    border: 2px solid black;
+    padding: 20px;
+    border-radius: 10px;
+}
+.sports-car {
+    height: 80px;
+}
+.sports-car:hover{
+    height: 50vh;
+    animation-delay: 10s;
+}
+.casual-car {
+    height: 80px;
+}
+.casual-car:hover{
+    height: 50vh;
+    animation-delay: 10s;
+}
+.family-car {
+    height: 80px;
+}
+.family-car:hover{
+    height: 50vh;
+    animation-delay: 10s;
+}
+.ads-car{
+    align-content: flex-end;
+}

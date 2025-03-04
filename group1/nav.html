@@ -1,0 +1,253 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        body{
+            background: url('ogyo.jpg') no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .header{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 15px 30px;
+            background: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+        .logo{
+            text-decoration: none;
+            color: black;
+            font-size: 27px;
+            font-weight: 600px;
+        }
+        .navbar ul{
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            padding: 0;
+            margin: 0;
+        }
+        .navbar a{
+            font-size: 17px;
+            color: black;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 12px;
+            transition: .3s;
+        }
+        .navbar a:hover{
+            color: white;
+            background: black;
+            border-radius: 6px;
+        }
+        .search-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+            text-align: right;
+        }
+        .header input[type="text"]{
+            padding: 6px;
+            border: 1px solid black;
+            font-size: 17px;
+            border-radius: 4px;
+            width: 200px;
+        }
+        .section{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+        }
+        .btn-drop{
+            background: white;
+            color: black;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        .drop-up{
+            position: relative;
+            display: inline-block;
+        }
+        .drop-content{
+            display: none;
+            position: absolute;
+            top: 100%;
+            background: black;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0,0.2);
+            z-index: 1;
+        }
+        .drop-content a{
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        } 
+        .drop-content a:hover{
+            background: black;
+        }
+        .drop-up:hover .drop-content{
+            display: block;
+        } 
+        .dropup:hover .btn-drop{
+            background-color: black;
+        }
+        .categories {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .category {
+            flex: 1;
+            max-width: 300px; /* Limit width for better centering */
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, height 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            cursor: pointer;
+}
+
+        .sports-car {
+            background-image: url('sports.jpg');
+        }
+
+        .casual-car {
+            background-image: url('casual.jpg');
+        }
+
+        .family-car {
+            background-image: url('family.jpg');
+        }
+
+        
+        .category:hover {
+            height: 400px; 
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .category h2, .category p, .category button {
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .category:hover h2,
+        .category:hover p,
+        .category:hover button {
+            opacity: 1;
+        }
+
+        .category button {
+            padding: 10px 20px;
+            border-radius: 25px;
+            border: none;
+            background-color: #ff7f50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .category button:hover {
+            background-color: #ff4500;
+        }
+        footer{
+            bottom: 0;
+            position: fixed;
+            width: 100%;
+        }
+        .footers{
+            background: grey;
+            height: 100px;
+            margin: auto;
+            width: 100%;
+            text-align:center;
+            padding:10px;
+            color:black;
+}
+    </style>
+    <header class="header">
+        <div class="box">
+        <input type="text" placeholder="Search">
+        <a href="#"><box-icon name='search'></box-icon></a>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="section">
+        <div class="categories">
+            <div class="sports-car category">
+                <h2>SPORTS CAR</h2>
+                <p>Fast, sleek, and designed for thrill-seekers.</p>
+
+                <a href="sportscar.html">
+                <button>Browse Sports Cars</button>
+            </a>
+            </div>
+
+            <div class="casual-car category">
+                <h2>CASUAL CAR</h2>
+                <p>Comfort and style for everyday driving.</p>
+                <a href="casual-car.html">
+                <button>Browse Casual Cars</button>
+            </a>
+            </div>
+
+            <div class="family-car category">
+                <h2>FAMILY CAR</h2>
+                <p>Perfect for long trips and family comfort.</p>
+                <a href="family-car.html">
+                <button>Browse Family Cars</button>
+            </a>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footers">
+                <h3>Special Deals Just for You!</h3>
+                <p>Get discounts on selected cars this season. Visit our store for more details.</p>
+            </div>
+        </footer>
+    
+    </section>
+</body>
+</html>
